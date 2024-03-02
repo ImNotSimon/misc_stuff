@@ -1,0 +1,12 @@
+.typing-effect {
+  width: 100%;
+  animation: typing 1s steps(22);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}

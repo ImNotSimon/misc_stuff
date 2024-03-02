@@ -1,0 +1,54 @@
+.shelfSwiper .swiper-button-next::after,
+.shelfSwiper .swiper-button-prev::after {
+  display: none;
+}
+
+.shelfSwiper .swiper-button-next,
+.shelfSwiper .swiper-button-prev {
+  top: 0px;
+  width: 64px;
+  height: -webkit-fill-available;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0; /* hide buttons by default */
+  transition: opacity 0.3s; /* smooth transition for opacity change */
+}
+
+.shelfSwiper:hover .swiper-button-next,
+.shelfSwiper:hover .swiper-button-prev {
+  opacity: 1; /* Show buttons when Swiper container is hovered */
+}
+
+.shelfSwiper .swiper-button-disabled {
+  opacity: 0;
+  transition: opacity 0.3s; /* smooth transition for opacity change */
+  cursor: auto;
+  pointer-events: none;
+  display: none;
+}
+
+.shelfSwiper .swiper-button-next.swiper-button-disabled,
+.shelfSwiper .swiper-button-prev.swiper-button-disabled {
+  display: none;
+}
+
+.shelfSwiper .swiper-button-next {
+  right: 0px;
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M9%204L17%2012L9%2020%22%20stroke%3D%22%23FFFFFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E'),
+    linear-gradient(
+      to right,
+      color-mix(in srgb, var(--background) 0%, transparent) 0%,
+      var(--background) 100%
+    );
+}
+
+.shelfSwiper .swiper-button-prev {
+  left: 0px;
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M15%204L7%2012L15%2020%22%20stroke%3D%22%23FFFFFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E'),
+    linear-gradient(
+      to left,
+      color-mix(in srgb, var(--background) 0%, transparent) 0%,
+      var(--background) 100%
+    );
+}

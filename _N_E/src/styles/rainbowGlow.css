@@ -1,0 +1,59 @@
+.rainbow-glow {
+  position: relative;
+  z-index: 2;
+}
+
+.rainbow-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform: scale(1) translateZ(0);
+  filter: blur(15px);
+  background: linear-gradient(
+    to right,
+    #ff0000,
+    #ff4500,
+    #ffa500,
+    #ffd700,
+    #ffff00,
+    #adff2f,
+    #008000,
+    #20b2aa,
+    #00ffff,
+    #0000ff,
+    #4b0082,
+    #8a2be2,
+    #9400d3,
+    #c71585,
+    #ff1493
+  );
+  background-size: 200% 200%;
+  animation: animateGlow 5.25s linear infinite;
+}
+
+.rainbow-glow:hover::before {
+  filter: blur(15px) brightness(2.2);
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes animateGlow-bottom {
+  0% {
+    background-position: 0% 200%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
